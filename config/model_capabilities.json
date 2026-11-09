@@ -1,0 +1,1121 @@
+{
+  "metadata": {
+    "name": "OpenAI Platform Model Capability Registry",
+    "schema_version": "1.0.0",
+    "verified_at": "2026-11-08",
+    "policy": "The live /v1/models response is the source of API-key visibility. This registry only supplements it with documented capability metadata.",
+    "limitations": [
+      "The Models API returns identifiers and basic metadata; it does not return full modalities, supported endpoints, context windows, or prices.",
+      "A model being visible in /v1/models does not guarantee access to every endpoint or feature.",
+      "Specialized models may require organization or project approval.",
+      "ChatGPT product-only models are not automatically API models.",
+      "Always check shutdown_date and official model documentation before a production call."
+    ],
+    "sources": [
+      "https://developers.openai.com/api/docs/models/all",
+      "https://developers.openai.com/api/docs/models",
+      "https://developers.openai.com/api/reference/resources/models/methods/list",
+      "https://developers.openai.com/api/reference/resources/models/methods/retrieve",
+      "https://developers.openai.com/api/reference/resources/responses/methods/create",
+      "https://developers.openai.com/api/docs/guides/image-generation",
+      "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst",
+      "https://developers.openai.com/api/docs/models/gpt-image-2.6-flare",
+      "https://developers.openai.com/api/docs/guides/transcription",
+      "https://developers.openai.com/api/docs/guides/embeddings",
+      "https://developers.openai.com/api/docs/guides/moderation",
+      "https://developers.openai.com/api/reference/resources/realtime/subresources/translations/subresources/client_secrets/methods/create",
+      "https://developers.openai.com/api/docs/guides/realtime-translation",
+      "https://developers.openai.com/api/reference/resources/live/methods/create"
+    ]
+  },
+  "models": [
+    {
+      "id": "gpt-6-astra",
+      "family": "GPT-6",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Flagship reasoning and complex coding model.",
+      "reasoning_effort_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "family": "GPT-6.1",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Near-flagship quality with lower cost than Astra.",
+      "reasoning_effort_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "gpt-6.1-terra",
+      "family": "GPT-6.1",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Visual reasoning, computer use, and writing.",
+      "reasoning_effort_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "gpt-6-luna",
+      "family": "GPT-6",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Efficient model for high-volume workloads.",
+      "reasoning_effort_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "gpt-6-sol",
+      "family": "GPT-6",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Coding and agentic workflows.",
+      "reasoning_effort_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "family": "GPT-5.6",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Professional reasoning and coding."
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "family": "GPT-5.6",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Balanced model for visual reasoning and tools."
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "family": "GPT-5.6",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Cost-sensitive high-volume workloads."
+    },
+    {
+      "id": "gpt-5.5",
+      "family": "GPT-5.5",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "General professional work and coding."
+    },
+    {
+      "id": "gpt-5.5-pro",
+      "family": "GPT-5.5",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Higher-precision professional work."
+    },
+    {
+      "id": "gpt-5.4",
+      "family": "GPT-5.4",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "General professional work and coding."
+    },
+    {
+      "id": "gpt-5.4-pro",
+      "family": "GPT-5.4",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Higher-precision professional work."
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "family": "GPT-5.4",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Efficient coding, computer use, and subagents."
+    },
+    {
+      "id": "gpt-5.2",
+      "family": "GPT-5.2",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Reasoning model with configurable effort."
+    },
+    {
+      "id": "gpt-5.2-pro",
+      "family": "GPT-5.2",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Higher-precision reasoning."
+    },
+    {
+      "id": "gpt-oss-120b",
+      "family": "gpt-oss",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Open-weight model; verify hosted API availability for your project."
+    },
+    {
+      "id": "gpt-oss-20b",
+      "family": "gpt-oss",
+      "kind": "general",
+      "capabilities": [
+        "text_generation",
+        "reasoning",
+        "coding",
+        "vision",
+        "tool_calling"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Open-weight model; verify hosted API availability for your project."
+    },
+    {
+      "id": "gpt-6-cyber",
+      "family": "Daybreak",
+      "kind": "specialized",
+      "capabilities": [
+        "cybersecurity_reasoning",
+        "authorized_defensive_security"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Restricted cybersecurity access program; eligibility and access controls apply."
+    },
+    {
+      "id": "gpt-5.6-cyber",
+      "family": "Daybreak",
+      "kind": "specialized",
+      "capabilities": [
+        "cybersecurity_reasoning",
+        "authorized_defensive_security"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Restricted cybersecurity model; eligibility and access controls apply."
+    },
+    {
+      "id": "gpt-rosalind",
+      "family": "Life Sciences",
+      "kind": "specialized",
+      "capabilities": [
+        "life_sciences_reasoning"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "responses"
+      ],
+      "metadata_status": "documented",
+      "notes": "Access is restricted to approved organizations."
+    },
+    {
+      "id": "gpt-image-2.6-sunburst",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "svg_output",
+        "animated_gif_output",
+        "complexity_control"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "notes": "Image generation and editing; high-detail workflows. Supports complexity control, SVG output, and animated GIF output according to the current official Image 2.6 guide."
+    },
+    {
+      "id": "gpt-image-2.6-flare",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "svg_output",
+        "animated_gif_output",
+        "complexity_control"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "notes": "Image generation and editing; fast iteration. Supports complexity control, SVG output, and animated GIF output according to the current official Image 2.6 guide."
+    },
+    {
+      "id": "gpt-image-2.5-sunburst",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "notes": "Image generation and editing; precision-oriented."
+    },
+    {
+      "id": "gpt-image-2.5-flare",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "notes": "Image generation and editing; fast everyday generation."
+    },
+    {
+      "id": "gpt-image-2",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "notes": "Image generation and editing; confirm the current model alias and endpoint support."
+    },
+    {
+      "id": "gpt-live-1",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "live/sessions"
+      ],
+      "metadata_status": "documented",
+      "notes": "Full-duplex Live voice session; uses the Live WebRTC/sideband session API."
+    },
+    {
+      "id": "gpt-realtime-2.1",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "realtime/client_secrets",
+        "realtime"
+      ],
+      "metadata_status": "documented",
+      "notes": "Realtime speech, reasoning, and tool use."
+    },
+    {
+      "id": "gpt-realtime-2.1-mini",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "realtime/client_secrets",
+        "realtime"
+      ],
+      "metadata_status": "documented",
+      "notes": "Realtime speech, reasoning, and tool use in a smaller model."
+    },
+    {
+      "id": "gpt-realtime-2",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "realtime/client_secrets",
+        "realtime"
+      ],
+      "metadata_status": "documented",
+      "notes": "Realtime speech and reasoning."
+    },
+    {
+      "id": "gpt-realtime-1.5",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "realtime/client_secrets",
+        "realtime"
+      ],
+      "metadata_status": "documented",
+      "notes": "Realtime audio input/output."
+    },
+    {
+      "id": "gpt-realtime-translate",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "realtime/translations/client_secrets",
+        "realtime/translations"
+      ],
+      "metadata_status": "documented",
+      "notes": "Realtime speech-to-speech translation."
+    },
+    {
+      "id": "gpt-live-transcribe",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "realtime/client_secrets",
+        "realtime/transcription_sessions"
+      ],
+      "metadata_status": "documented",
+      "notes": "Low-latency realtime speech transcription."
+    },
+    {
+      "id": "gpt-realtime-whisper",
+      "family": "Realtime & Audio",
+      "kind": "realtime",
+      "capabilities": [
+        "realtime_audio",
+        "speech_to_speech",
+        "streaming"
+      ],
+      "input_modalities": [
+        "audio",
+        "text"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "endpoints": [
+        "realtime/client_secrets",
+        "realtime/transcription_sessions"
+      ],
+      "metadata_status": "documented",
+      "notes": "Realtime transcription model."
+    },
+    {
+      "id": "gpt-transcribe",
+      "family": "Transcription",
+      "kind": "audio",
+      "capabilities": [
+        "speech_to_text",
+        "file_transcription"
+      ],
+      "input_modalities": [
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "endpoints": [
+        "audio/transcriptions",
+        "realtime/client_secrets"
+      ],
+      "metadata_status": "documented",
+      "notes": "Recommended starting point for recorded audio transcription."
+    },
+    {
+      "id": "gpt-audio-1.5",
+      "family": "Audio",
+      "kind": "audio",
+      "capabilities": [
+        "audio_input",
+        "audio_output"
+      ],
+      "input_modalities": [
+        "text",
+        "audio"
+      ],
+      "output_modalities": [
+        "text",
+        "audio"
+      ],
+      "endpoints": [
+        "chat/completions"
+      ],
+      "metadata_status": "documented",
+      "notes": "Use Chat Completions audio parameters; verify current model access."
+    },
+    {
+      "id": "text-embedding-3-large",
+      "family": "Embeddings",
+      "kind": "embedding",
+      "capabilities": [
+        "text_embeddings"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "vector"
+      ],
+      "endpoints": [
+        "embeddings"
+      ],
+      "metadata_status": "documented",
+      "notes": "Highest capability embedding model in the current catalog."
+    },
+    {
+      "id": "text-embedding-3-small",
+      "family": "Embeddings",
+      "kind": "embedding",
+      "capabilities": [
+        "text_embeddings"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "vector"
+      ],
+      "endpoints": [
+        "embeddings"
+      ],
+      "metadata_status": "documented",
+      "notes": "Smaller, lower-cost embedding model."
+    },
+    {
+      "id": "text-embedding-ada-002",
+      "family": "Embeddings",
+      "kind": "embedding",
+      "capabilities": [
+        "text_embeddings"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "vector"
+      ],
+      "endpoints": [
+        "embeddings"
+      ],
+      "metadata_status": "documented",
+      "notes": "Legacy embedding model; prefer text-embedding-3 models for new work."
+    },
+    {
+      "id": "omni-moderation-latest",
+      "family": "Moderation",
+      "kind": "moderation",
+      "capabilities": [
+        "text_moderation",
+        "image_moderation"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "classification"
+      ],
+      "endpoints": [
+        "moderations"
+      ],
+      "metadata_status": "documented",
+      "notes": "Moderation endpoint; interpret scores as signals, not an automatic policy decision."
+    },
+    {
+      "id": "gpt-4o-mini-tts",
+      "family": "Legacy TTS",
+      "kind": "audio",
+      "capabilities": [
+        "text_to_speech"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "audio"
+      ],
+      "endpoints": [
+        "audio/speech"
+      ],
+      "metadata_status": "documented",
+      "notes": "Legacy speech-generation model; check the official deprecation page and current endpoint availability before new deployments.",
+      "lifecycle_note": "deprecated"
+    },
+    {
+      "id": "tts-1",
+      "family": "Legacy TTS",
+      "kind": "audio",
+      "capabilities": [
+        "text_to_speech"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "audio"
+      ],
+      "endpoints": [
+        "audio/speech"
+      ],
+      "metadata_status": "documented",
+      "notes": "Deprecated legacy speech model; do not choose for new workflows without explicit user instruction.",
+      "lifecycle_note": "deprecated"
+    },
+    {
+      "id": "tts-1-hd",
+      "family": "Legacy TTS",
+      "kind": "audio",
+      "capabilities": [
+        "text_to_speech"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "audio"
+      ],
+      "endpoints": [
+        "audio/speech"
+      ],
+      "metadata_status": "documented",
+      "notes": "Deprecated legacy speech model; do not choose for new workflows without explicit user instruction.",
+      "lifecycle_note": "deprecated"
+    },
+    {
+      "id": "chat-latest",
+      "family": "ChatGPT product",
+      "kind": "chat_product_only",
+      "capabilities": [],
+      "input_modalities": [],
+      "output_modalities": [],
+      "endpoints": [],
+      "metadata_status": "documented",
+      "api_use_recommended": false,
+      "notes": "ChatGPT model; official model catalog says it is not recommended for API use."
+    },
+    {
+      "id": "chatgpt-image-latest",
+      "family": "ChatGPT product",
+      "kind": "chat_product_only",
+      "capabilities": [],
+      "input_modalities": [],
+      "output_modalities": [],
+      "endpoints": [],
+      "metadata_status": "documented",
+      "api_use_recommended": false,
+      "lifecycle_note": "deprecated",
+      "notes": "ChatGPT image model; not a general API image model. Use a documented GPT Image API model."
+    },
+    {
+      "id": "gpt-image-1",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "lifecycle_note": "shutdown",
+      "notes": "Shut down on 2026-10-23; use a current GPT Image model."
+    },
+    {
+      "id": "gpt-image-1.5",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "lifecycle_note": "deprecated",
+      "notes": "Deprecated prior image model; prefer GPT Image 2.6 or 2.5."
+    },
+    {
+      "id": "gpt-image-1-mini",
+      "family": "GPT Image",
+      "kind": "image",
+      "capabilities": [
+        "image_generation",
+        "image_editing"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "endpoints": [
+        "images/generations",
+        "images/edits"
+      ],
+      "metadata_status": "documented",
+      "lifecycle_note": "deprecated",
+      "notes": "Deprecated prior image model; prefer a current GPT Image model."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "openai-universal-models": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/AI/openai-universal-model-mcp",
+        "run",
+        "python",
+        "-m",
+        "openai_universal_model_mcp.server"
+      ]
+    }
+  }
+}

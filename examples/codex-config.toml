@@ -1,0 +1,15 @@
+# Merge this section into your Codex config.toml.
+# Replace the example path with the actual absolute project path.
+[mcp_servers.openai_universal_models]
+command = "uv"
+args = [
+  "--directory",
+  "F:\\AI\\openai-universal-model-mcp",
+  "run",
+  "python",
+  "-m",
+  "openai_universal_model_mcp.server"
+]
+# Codex does not forward arbitrary environment variables to MCP servers.
+# Needed only when the key is in the OS environment instead of .env.
+env_vars = ["OPENAI_API_KEY"]
